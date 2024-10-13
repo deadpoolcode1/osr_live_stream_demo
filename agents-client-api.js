@@ -208,19 +208,16 @@ function onTrack(event) {
 
 function setVideoElement(stream) {
   if (!stream) return;
-  // Add Animation Class
-  videoElement.classList.add("animated");
 
-  // Removing browsers' autoplay's 'Mute' Requirement
-  videoElement.muted = false;
+  // Ensure consistent size and focus for the video element
+  videoElement.style.width = "100%";
+  videoElement.style.height = "100%";
+  videoElement.style.objectFit = "cover"; // Ensures the video fills the element, maintaining aspect ratio
+  videoElement.style.border = "none"; // Optional: you can tweak this if there are any borders
 
+  videoElement.muted = false; // Unmute for playback
   videoElement.srcObject = stream;
   videoElement.loop = false;
-
-  // Remove Animation Class after it's completed
-  setTimeout(() => {
-    videoElement.classList.remove("animated");
-  }, 1000);
 
   // safari hotfix
   if (videoElement.paused) {
@@ -232,17 +229,17 @@ function setVideoElement(stream) {
 }
 
 function playIdleVideo() {
-  // Add Animation Class
-  videoElement.classList.toggle("animated");
+  // Ensure consistent size and focus for the idle video
+  videoElement.style.width = "100%";
+  videoElement.style.height = "100%";
+  videoElement.style.objectFit = "cover"; // Ensures the idle video fills the element
 
-  videoElement.srcObject = undefined;
-  videoElement.src = 'oracle_Idle.mp4';
+  videoElement.srcObject = null; // Clear the current stream
+  videoElement.src = 'oracle_Idle.mp4'; // Idle video
   videoElement.loop = true;
+  videoElement.muted = true; // Keep muted for idle video playback
 
-  // Remove Animation Class after it's completed
-  setTimeout(() => {
-    videoElement.classList.remove("animated");
-  }, 1000);
+  videoElement.play(); // Start playing the idle video
 }
 
 function stopAllStreams() {
