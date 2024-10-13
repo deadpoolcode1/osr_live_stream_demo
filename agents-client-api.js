@@ -313,7 +313,7 @@ connectButton.onclick = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      source_url: 'https://create-images-results.d-id.com/DefaultPresenters/Emma_f/v1_image.jpeg'
+      source_url: 'https://raw.githubusercontent.com/jjmlovesgit/D-id_Streaming_Chatgpt/main/french7.png'
     }),
   });
 
@@ -490,17 +490,17 @@ async function agentsAPIworkflow() {
           "type": "microsoft",
           "voice_id": "en-US-JennyMultilingualV2Neural"
         },
-        "thumbnail": "https://create-images-results.d-id.com/DefaultPresenters/Emma_f/v1_image.jpeg",
-        "source_url": "https://create-images-results.d-id.com/DefaultPresenters/Emma_f/v1_image.jpeg"
+        "thumbnail": "https://raw.githubusercontent.com/jjmlovesgit/D-id_Streaming_Chatgpt/main/french7.png",
+        "source_url": "https://raw.githubusercontent.com/jjmlovesgit/D-id_Streaming_Chatgpt/main/french7.png"
       },
       "llm": {
         "type": "openai",
         "provider": "openai",
         "model": "gpt-3.5-turbo-1106",
-        "instructions": "Your name is Emma, an AI designed to assist with information",
+        "instructions": "Your name is Evee, an AI designed to assist with information",
         "template": "rag-ungrounded"
       },
-      "preview_name": "Emma"
+      "preview_name": "Evee"
     }
   );
   console.log("Create Agent: ", createAgent.data);
