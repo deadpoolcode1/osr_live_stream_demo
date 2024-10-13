@@ -456,8 +456,8 @@ async function agentsAPIworkflow() {
   const createDocument = await axios.post(`/knowledge/${knowledgeId}/documents`,
     {
       "documentType": "pdf",
-      "source_url": "https://d-id-public-bucket.s3.us-west-2.amazonaws.com/Prompt_engineering_Wikipedia.pdf",
-      "title": "Prompt Engineering Wikipedia Page PDF",
+      "source_url": "https://ilan-test-vnesss.s3.eu-west-1.amazonaws.com/data.pdf",
+      "title": "Osr Data",
     });
   console.log("Create Document: ", createDocument.data);
 
