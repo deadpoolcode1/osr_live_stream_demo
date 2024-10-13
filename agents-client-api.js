@@ -236,7 +236,7 @@ function playIdleVideo() {
   videoElement.classList.toggle("animated");
 
   videoElement.srcObject = undefined;
-  videoElement.src = 'emma_idle.mp4';
+  videoElement.src = 'oracle_Idle.mp4';
   videoElement.loop = true;
 
   // Remove Animation Class after it's completed
