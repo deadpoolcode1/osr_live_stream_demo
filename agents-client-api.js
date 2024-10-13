@@ -497,7 +497,7 @@ async function agentsAPIworkflow() {
         "type": "openai",
         "provider": "openai",
         "model": "gpt-3.5-turbo-1106",
-        "instructions": "Your name is Emma, an AI designed to assist with information about Prompt Engineering and RAG",
+        "instructions": "Your name is Emma, an AI designed to assist with information",
         "template": "rag-ungrounded"
       },
       "preview_name": "Emma"
