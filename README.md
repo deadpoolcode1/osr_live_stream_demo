@@ -20,3 +20,9 @@
 * press 'Connect' to connect to the agent, once done, type a message and press 'Send' to start a chat
 * you can store the created `agentId` and `chatID` variables and at the bottom of the `agents-client-api.js` file for future chats with your newly created Agent.
 ![app](./agents_app.png)
+
+##test
+
+http://localhost:3000/process-text?text=Who%20is%20Elon%20Musk
+
+http://localhost:3000/process-text?text=Who%20is%20osrenterprises
